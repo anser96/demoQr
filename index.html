@@ -308,7 +308,7 @@
 
             if (valid) {
                 $('#exampleModal').modal('hide')
-                fetch('http://localhost:8080/paciente', {
+                fetch('https://demoqr-c70967ad0f23.herokuapp.com/paciente', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -329,7 +329,7 @@
 
         }
         function obtenerPaciente(id){
-            let url = 'http://localhost:8080/paciente/'+id
+            let url = 'https://demoqr-c70967ad0f23.herokuapp.com/paciente/'+id
             $.ajax({
                 url: url,
                 method: 'GET',
@@ -351,7 +351,7 @@
         }
         function listarPacientes(){
             $(document).ready(function () {
-            const apiUrl = 'http://localhost:8080/paciente';
+            const apiUrl = 'https://demoqr-c70967ad0f23.herokuapp.com/paciente';
             const pacienteObj = {}
             const ajaxOptions = {
                 url: apiUrl,
@@ -417,7 +417,7 @@
             try {
                 const qr = new QRious({
                     element: document.querySelector('#codigo'+div),
-                    value: infoPaciente.html,
+                    value: "https://anser96.github.io/demoQr/infoPaciente.html",
                     size: 200
                 });
 
@@ -430,7 +430,7 @@
         }
         function editar(){
             let id = document.getElementById("pacienteId").value;
-            let url = 'http://localhost:8080/paciente/'+id
+            let url = 'https://demoqr-c70967ad0f23.herokuapp.com/paciente/'+id
             var nombre = document.getElementById("nombreEdit").value;
             var apellido = document.getElementById("apellidoEdit").value;
             var direccion = document.getElementById("direccionEdit").value;
