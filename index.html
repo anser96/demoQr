@@ -27,7 +27,7 @@
             ventimp.close();
         }
     </script>
-    <!-- Button trigger modal -->
+    <!--Modal Editar -->
     <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -41,14 +41,14 @@
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="nombreEdit" aria-describedby="emailHelp">
-                            <div class="alert alert-danger" role="alert" id="nombreAlert" style="display: none;">
+                            <div class="alert alert-danger" role="alert" id="nombreEditAlert" style="display: none;">
                                 Este Campo es requerido!
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Apellido</label>
                             <input type="text" class="form-control" id="apellidoEdit">
-                            <div class="alert alert-danger" role="alert" id="apellidoAlert" style="display: none;">
+                            <div class="alert alert-danger" role="alert" id="apellidoEditAlert" style="display: none;">
                                 Este Campo es requerido!
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                                 <option value="CC">CC</option>
                                 <option value="CE">CE</option>
                             </select>
-                            <div class="alert alert-danger" role="alert" id="tipoDocumentoAlert" style="display: none;">
+                            <div class="alert alert-danger" role="alert" id="tipoDocumentoEditAlert" style="display: none;">
                                 Este Campo es requerido!
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                                 <option value="O+">O+</option>
                                 <option value="O-">O-</option>
                             </select>
-                            <div class="alert alert-danger" role="alert" id="grupoSanguineoAlert" style="display: none;">
+                            <div class="alert alert-danger" role="alert" id="grupoSanguineoEditAlert" style="display: none;">
                                 Este Campo es requerido!
                             </div>
                         </div>
@@ -86,7 +86,7 @@
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Numero Documento</label>
                             <input type="text" class="form-control" id="numeroDocumentoEdit">
-                            <div class="alert alert-danger" role="alert" id="numeroDocumentoAlert"
+                            <div class="alert alert-danger" role="alert" id="numeroDocumentoEditAlert"
                                 style="display: none;">
                                 Este Campo es requerido!
                             </div>
@@ -94,14 +94,64 @@
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">edad</label>
                             <input type="text" class="form-control" id="edadEdit">
-                            <div class="alert alert-danger" role="alert" id="edadAlert" style="display: none;">
+                            <div class="alert alert-danger" role="alert" id="edadEditAlert" style="display: none;">
                                 Este Campo es requerido!
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">direccion</label>
                             <input type="text" class="form-control" id="direccionEdit">
-                            <div class="alert alert-danger" role="alert" id="direccionAlert" style="display: none;">
+                            <div class="alert alert-danger" role="alert" id="direccionEditAlert" style="display: none;">
+                                Este Campo es requerido!
+                            </div>
+                        </div>
+                        <h5>Datos Encargado</h5>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombreEncargadoEdit" aria-describedby="emailHelp">
+                            <div class="alert alert-danger" role="alert" id="nombreEncargadoEditAlert" style="display: none;">
+                                Este Campo es requerido!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="apellidoEncargadoEdit">
+                            <div class="alert alert-danger" role="alert" id="apellidoEncargadoEditAlert" style="display: none;">
+                                Este Campo es requerido!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Tipo Documento</label>
+
+                            <select class="form-select" aria-label="Default select example" id="tipoDocumentoEncargadoEdit">
+                                <option selected value="">Selecciona Tipo Documento</option>
+                                <option value="CC">CC</option>
+                                <option value="CE">CE</option>
+                            </select>
+                            <div class="alert alert-danger" role="alert" id="tipoDocumentoEncargadoEditAlert" style="display: none;">
+                                Este Campo es requerido!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Numero Documento</label>
+                            <input type="text" class="form-control" id="numeroDocumentoEncargadoEdit">
+                            <div class="alert alert-danger" role="alert" id="numeroDocumentoEncargadoEditAlert"
+                                style="display: none;">
+                                Este Campo es requerido!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Telefono</label>
+                            <input type="text" class="form-control" id="numeroTelefonoEncargadoEdit">
+                            <div class="alert alert-danger" role="alert" id="numeroTelefonoEncargadoEditAlert"
+                                style="display: none;">
+                                Este Campo es requerido!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">direccion</label>
+                            <input type="text" class="form-control" id="direccionEncargadoEdit">
+                            <div class="alert alert-danger" role="alert" id="direccionEncargadoEditAlert" style="display: none;">
                                 Este Campo es requerido!
                             </div>
                         </div>
@@ -115,7 +165,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal Crear -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -151,7 +201,14 @@
                                 Este Campo es requerido!
                             </div>
                         </div>
-
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Numero Documento</label>
+                            <input type="text" class="form-control" id="numeroDocumento">
+                            <div class="alert alert-danger" role="alert" id="numeroDocumentoAlert"
+                                style="display: none;">
+                                Este Campo es requerido!
+                            </div>
+                        </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Grupo Sanquineo</label>
                             <select class="form-select" id="grupoSanguineo" name="grupoSanguineo">
@@ -172,15 +229,6 @@
                                 Este Campo es requerido!
                             </div>
                         </div>
-
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Numero Documento</label>
-                            <input type="text" class="form-control" id="numeroDocumento">
-                            <div class="alert alert-danger" role="alert" id="numeroDocumentoAlert"
-                                style="display: none;">
-                                Este Campo es requerido!
-                            </div>
-                        </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">edad</label>
                             <input type="text" class="form-control" id="edad">
@@ -192,6 +240,56 @@
                             <label for="exampleInputPassword1" class="form-label">direccion</label>
                             <input type="text" class="form-control" id="direccion">
                             <div class="alert alert-danger" role="alert" id="direccionAlert" style="display: none;">
+                                Este Campo es requerido!
+                            </div>
+                        </div>
+                        <h5>Asignar Encargado</h5>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombreEncargado">
+                            <div class="alert alert-danger" role="alert" id="nombreEncargadoAlert" style="display: none;">
+                                Este Campo es requerido!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="apellidoEncargado">
+                            <div class="alert alert-danger" role="alert" id="apellidoEncargadoAlert" style="display: none;">
+                                Este Campo es requerido!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Tipo Documento</label>
+
+                            <select class="form-select" aria-label="Default select example" id="tipoDocumentoEncargado">
+                                <option selected value="">Selecciona Tipo Documento</option>
+                                <option value="CC">CC</option>
+                                <option value="CE">CE</option>
+                            </select>
+                            <div class="alert alert-danger" role="alert" id="tipoDocumentoEncargadoAlert" style="display: none;">
+                                Este Campo es requerido!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Numero Documento</label>
+                            <input type="text" class="form-control" id="numeroDocumentoEncargado">
+                            <div class="alert alert-danger" role="alert" id="numeroDocumentoEncargadoAlert"
+                                style="display: none;">
+                                Este Campo es requerido!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Numero Telefono</label>
+                            <input type="text" class="form-control" id="numeroTelefonoEncargado" required>
+                            <div class="alert alert-danger" role="alert" id="numeroTelefonoEncargadoAlert"
+                                style="display: none;">
+                                Este Campo es requerido!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Dirección</label>
+                            <input type="text" class="form-control" id="direccionEncargado" required>
+                            <div class="alert alert-danger" role="alert" id="direccionEncargadoAlert" style="display: none;">
                                 Este Campo es requerido!
                             </div>
                         </div>
@@ -234,7 +332,7 @@
         function crear() {
             var valid = true
 
-            // Obtener los valores de los campos del formulario
+            // Obtener los valores del paciente
             var nombre = document.getElementById("nombre").value;
             var apellido = document.getElementById("apellido").value;
             var direccion = document.getElementById("direccion").value;
@@ -242,6 +340,26 @@
             var numeroDocumento = document.getElementById("numeroDocumento").value;
             var grupoSanguineo = document.getElementById("grupoSanguineo").value;
             var edad = document.getElementById("edad").value;
+    
+            var nombreEncargado = document.getElementById("nombreEncargado").value;
+            var apellidoEncargado = document.getElementById("apellidoEncargado").value;
+            var direccionEncargado = document.getElementById("direccionEncargado").value;
+            var tipoDocumentoEncargado = document.getElementById("tipoDocumentoEncargado").value;
+            var numeroDocumentoEncargado = document.getElementById("numeroDocumentoEncargado").value;
+            var numeroTelefonoEncargado = document.getElementById("numeroTelefonoEncargado").value;
+            var direccionEncargado = document.getElementById("direccionEncargado").value;
+
+            var encargado = [{
+                nombre: nombreEncargado,
+                apellido: apellidoEncargado,
+                tipoDocumento: tipoDocumentoEncargado,
+                numeroDocumento: numeroDocumentoEncargado,
+                numeroTelefono: numeroTelefonoEncargado,
+                direccion: direccionEncargado
+
+            }]
+
+            
 
             // Crear un objeto con los datos del formulario
             var data = {
@@ -251,7 +369,8 @@
                 tipoDocumento: tipoDocumento,
                 numeroDocumento: numeroDocumento,
                 grupoSanguineo: grupoSanguineo,
-                direccion: direccion
+                direccion: direccion,
+                encargado: encargado
             };
             console.log(data)
 
@@ -297,13 +416,50 @@
             } else {
                 $('#grupoSanguineoAlert').hide();
             }
-
-
             if (edad === '') {
                 $('#edadAlert').show();
                 valid = false;
             } else {
                 $('#edadAlert').hide();
+            }
+            if (nombreEncargado === '') {
+                $('#nombreEncargadoAlert').show();
+                valid = false;
+            } else {
+                $('#nombreEncargadoAlert').hide();
+            }
+
+            if (apellidoEncargado === '') {
+                $('#apellidoEncargadoAlert').show();
+                valid = false;
+            } else {
+                $('#apellidoEncargadoAlert').hide();
+            }
+
+            if (direccionEncargado === '') {
+                $('#direccionEncargadoAlert').show();
+                valid = false;
+            } else {
+                $('#direccionEncargadoAlert').hide();
+            }
+
+            if (tipoDocumentoEncargado === '') {
+                $('#tipoDocumentoEncargadoAlert').show();
+                valid = false;
+            } else {
+                $('#tipoDocumentoEncargadoAlert').hide();
+            }
+            if (numeroDocumentoEncargado === '') {
+                $('#numeroDocumentoEncargadoAlert').show();
+                valid = false;
+            } else {
+                $('#numeroDocumentoEncargadoAlert').hide();
+            }
+            if (numeroTelefonoEncargado === '') {
+                $('#numeroTelefonoEncargadoAlert').show();
+                valid = false;
+            } else {
+                $('#numeroTelefonoEncargadoAlert').hide();
             }
 
             if (valid) {
@@ -343,6 +499,12 @@
                     $('#edadEdit').val(datosPaciente.edad);
                     $('#direccionEdit').val(datosPaciente.direccion);
                     $('#pacienteId').val(datosPaciente.id);
+                    $('#nombreEncargadoEdit').val(datosPaciente.encargado[0].nombre);
+                    $('#apellidoEncargadoEdit').val(datosPaciente.encargado[0].apellido);
+                    $('#tipoDocumentoEncargadoEdit').val(datosPaciente.encargado[0].tipoDocumento);
+                    $('#numeroDocumentoEncargadoEdit').val(datosPaciente.encargado[0].numeroDocumento);
+                    $('#direccionEncargadoEdit').val(datosPaciente.encargado[0].direccion);
+                    $('#numeroTelefonoEncargadoEdit').val(datosPaciente.encargado[0].numeroTelefono);
                 },
                 error: function (error) {
                     console.error('Error al cargar datos del paciente:', error);
@@ -391,7 +553,7 @@
                         <div class="col">
                             <h2>QR Paciente</h2>
                             <div id="containerImage">
-                                <a href="infoPaciente.html" onclick=setStorage(${paciente.id}) id="${paciente.id}"><img alt="Código QR" id="codigo${paciente.id}"></a>
+                                <a href="infoPaciente.html?id=${paciente.id}" id="${paciente.id}"><img alt="Código QR" id="codigo${paciente.id}"></a>
                             </div>
                             <div id="btnImprimir${paciente.id}">
                                
@@ -400,7 +562,7 @@
                         
                         `);
                         const qrData = JSON.stringify(data);
-                        generarQR(qrData,paciente.id);
+                        generarQR(data.id,paciente.id);
                     });
 
                     
@@ -410,14 +572,13 @@
                 });
         });
         }
-        function setStorage(id){
-            localStorage.setItem('id', id);
-        }
         function generarQR(data,div) {
+            
+            const enlace = `infoPaciente.html?id=${div}`
             try {
                 const qr = new QRious({
                     element: document.querySelector('#codigo'+div),
-                    value: "https://anser96.github.io/demoQr/infoPaciente.html",
+                    value: enlace,
                     size: 200
                 });
 
@@ -440,6 +601,24 @@
             var edad = document.getElementById("edadEdit").value;
             let valid = true;
 
+            var nombreEncargado = document.getElementById("nombreEncargadoEdit").value;
+            var apellidoEncargado = document.getElementById("apellidoEncargadoEdit").value;
+            var direccionEncargado = document.getElementById("direccionEncargado").value;
+            var tipoDocumentoEncargado = document.getElementById("tipoDocumentoEncargadoEdit").value;
+            var numeroDocumentoEncargado = document.getElementById("numeroDocumentoEncargadoEdit").value;
+            var numeroTelefonoEncargado = document.getElementById("numeroTelefonoEncargadoEdit").value;
+            var direccionEncargado = document.getElementById("direccionEncargadoEdit").value;
+
+            var encargado = [{
+                nombre: nombreEncargado,
+                apellido: apellidoEncargado,
+                tipoDocumento: tipoDocumentoEncargado,
+                numeroDocumento: numeroDocumentoEncargado,
+                numeroTelefono: numeroTelefonoEncargado,
+                direccion: direccionEncargado
+
+            }]
+
             // Crear un objeto con los datos del formulario
             var data = {
                 nombre: nombre,
@@ -448,49 +627,89 @@
                 tipoDocumento: tipoDocumento,
                 numeroDocumento: numeroDocumento,
                 grupoSanguineo: grupoSanguineo,
-                direccion: direccion
+                direccion: direccion,
+                encargado: encargado
             };
             console.log(data)
               // Validaciones y alertas
               if (nombre === '') {
-                $('#nombreAlert').show();
+                $('#nombreEditAlert').show();
                 valid = false;
             } else {
-                $('#nombreAlert').hide();
+                $('#nombreEditAlert').hide();
             }
 
             if (apellido === '') {
-                $('#apellidoAlert').show();
+                $('#apellidoEditAlert').show();
                 valid = false;
             } else {
-                $('#apellidoAlert').hide();
+                $('#apellidoEditAlert').hide();
             }
 
             if (direccion === '') {
-                $('#direccionAlert').show();
+                $('#direccionEditAlert').show();
                 valid = false;
             } else {
-                $('#direccionAlert').hide();
+                $('#direccionEditAlert').hide();
             }
 
             if (tipoDocumento === '') {
-                $('#tipoDocumentoAlert').show();
+                $('#tipoDocumentoEditAlert').show();
                 valid = false;
             } else {
-                $('#tipoDocumentoAlert').hide();
+                $('#tipoDocumentoEditAlert').hide();
             }
             if (numeroDocumento === '') {
-                $('#numeroDocumentoAlert').show();
+                $('#numeroDocumentoEditAlert').show();
                 valid = false;
             } else {
-                $('#numeroDocumentoAlert').hide();
+                $('#numeroDocumentoEditAlert').hide();
             }
 
             if (grupoSanguineo === '') {
-                $('#grupoSanguineoAlert').show();
+                $('#grupoSanguineoEditAlert').show();
                 valid = false;
             } else {
-                $('#grupoSanguineoAlert').hide();
+                $('#grupoSanguineoEditAlert').hide();
+            }
+            if (nombreEncargado === '') {
+                $('#nombreEncargadoEditAlert').show();
+                valid = false;
+            } else {
+                $('#nombreEncargadoEditAlert').hide();
+            }
+
+            if (apellidoEncargado === '') {
+                $('#apellidoEncargadoEditAlert').show();
+                valid = false;
+            } else {
+                $('#apellidoEncargadoEditAlert').hide();
+            }
+
+            if (direccionEncargado === '') {
+                $('#direccionEncargadoEditAlert').show();
+                valid = false;
+            } else {
+                $('#direccionEncargadoEditAlert').hide();
+            }
+
+            if (tipoDocumentoEncargado === '') {
+                $('#tipoDocumentoEncargadoEditAlert').show();
+                valid = false;
+            } else {
+                $('#tipoDocumentoEncargadoEditAlert').hide();
+            }
+            if (numeroDocumentoEncargado === '') {
+                $('#numeroDocumentoEncargadoEditAlert').show();
+                valid = false;
+            } else {
+                $('#numeroDocumentoEncargadoEditAlert').hide();
+            }
+            if (numeroTelefonoEncargado === '') {
+                $('#numeroTelefonoEncargadoEditAlert').show();
+                valid = false;
+            } else {
+                $('#numeroTelefonoEncargadoEditAlert').hide();
             }
 
 
