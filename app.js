@@ -1,10 +1,11 @@
-$(document).ready(function () {
-   
- 
-    obtenerPhone()
+obtenerPhone().then(() => {
+    // Esperar 10 segundos y luego obtener la ubicación
+    setTimeout(() => {
         getLocation();
-    
+    }, 10000);
 });
+    
+
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -12,6 +13,7 @@ function getLocation() {
             function (position) {
                 // Enviar la ubicación al servidor
                 sendLocationToServer(position.coords.latitude, position.coords.longitude);
+                console.log("location")
             },
             function (error) {
                 console.error('Error al obtener la ubicación:', error.message);
@@ -33,7 +35,7 @@ function sendLocationToServer(latitude, longitude) {
         contentType: 'application/json',
         data: JSON.stringify({
             to: telefono, 
-            message: 'Parece que tu paciente Tuvo un accidente Haz click en el enlace para ver su ubicación: ' + mapsLink
+            message: 'Parece que tu paciente tuvo un accidente Haz click en el enlace para ver su ubicación: ' + mapsLink
         }),
         success: function (response) {
             console.log('SMS enviado exitosamente:', response);
@@ -45,17 +47,21 @@ function sendLocationToServer(latitude, longitude) {
 }
 
 function obtenerPhone(){
-    let id = obtenerIDDeURL();
-    let url = 'https://demoqr-c70967ad0f23.herokuapp.com/paciente/phone/'+id
-    $.ajax({
-        url: url,
-        method: 'GET',
-        contentType: 'application/json',
-        success: function (response) {
-            localStorage.setItem('phone',response)
-        },
-        error: function (error) {
-            console.error('Error al recibir el telefono:', error);
-        }
+    return new Promise((resolve, reject) => {
+        let id = obtenerIDDeURL();
+        let url = 'https://demoqr-c70967ad0f23.herokuapp.com/paciente/phone/' + id;
+        $.ajax({
+            url: url,
+            method: 'GET',
+            contentType: 'application/json',
+            success: function (response) {
+                localStorage.setItem('phone', response);
+                resolve(); // Resuelve la promesa cuando se obtiene el teléfono
+            },
+            error: function (error) {
+                console.error('Error al recibir el teléfono:', error);
+                reject(error); // Rechaza la promesa en caso de error
+            }
+        });
     });
 }
