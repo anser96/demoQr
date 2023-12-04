@@ -27,7 +27,7 @@
         listarPacientes(id)
         listarEncargado()
         function listarPacientes(id) {
-            let url = 'http://localhost:8080/paciente/' + id
+            let url = 'https://demoqr-c70967ad0f23.herokuapp.com/paciente/' + id
             $(document).ready(function () {
                 const apiUrl = url;
                 const pacienteObj = {}
@@ -69,7 +69,7 @@
         }
         function listarEncargado() {
             $(document).ready(function () {
-                const apiUrl = 'http://localhost:8080/encargado';
+                const apiUrl = 'https://demoqr-c70967ad0f23.herokuapp.com/encargado';
                 const pacienteObj = {}
                 const ajaxOptions = {
                     url: apiUrl,
