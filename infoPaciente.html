@@ -23,9 +23,8 @@
         </div>
     </div>
     <script>
-        let id = localStorage.getItem('id');
+        let id = obtenerIDDeURL();
         listarPacientes(id)
-        listarEncargado()
         function listarPacientes(id) {
             let url = 'https://demoqr-c70967ad0f23.herokuapp.com/paciente/' + id
             $(document).ready(function () {
@@ -60,6 +59,24 @@
                                 </div>
                             </div>    
                         </div> 
+                        <div class="col-md-auto">
+                            <h1>Datos Encargado</h1>
+                            <div class="card"">
+                                <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+                                <div class="card-body">
+                                    <h4 class="card-title" id="nombre">${paciente.encargado[0].nombre} ${paciente.encargado[0].apellido}</h4>
+                                    <p class="card-text">
+                                    <ul id="listaPacientes" class="list-group">
+                                        <li class="list-group-item"><span class="fas fa-star"></span>Tipo Documento: ${paciente.encargado[0].tipoDocumento}</li>
+                                        <li class="list-group-item">Número Documento: ${paciente.encargado[0].numeroDocumento}</li>
+                                        <li class="list-group-item">Dirección: ${paciente.encargado[0].direccion}</li>
+                                        <li class="list-group-item">Teléfono: ${paciente.encargado[0].numeroTelefono}</li>
+                                    </ul>
+                                    </p>
+
+                                </div>
+                            </div>   
+                        </div> 
                         `);
                     })
                     .fail(function (jqXHR, textStatus, errorThrown) {
@@ -67,47 +84,9 @@
                     });
             });
         }
-        function listarEncargado() {
-            $(document).ready(function () {
-                const apiUrl = 'https://demoqr-c70967ad0f23.herokuapp.com/encargado';
-                const pacienteObj = {}
-                const ajaxOptions = {
-                    url: apiUrl,
-                    method: 'GET',
-                    dataType: 'json'
-                };
-
-                $.ajax(ajaxOptions)
-                    .done(function (data) {
-                        console.log(data)
-                        const listaPacientes = $('#contenido');
-                        data.forEach(function (paciente) {
-                            listaPacientes.append(`
-                        <div class="col-md-auto">
-                            <h1>Datos Encargado</h1>
-                            <div class="card"">
-                                <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
-                                <div class="card-body">
-                                    <h4 class="card-title" id="nombre">${paciente.nombre} ${paciente.apellido}</h4>
-                                    <p class="card-text">
-                                    <ul id="listaPacientes" class="list-group">
-                                        <li class="list-group-item"><span class="fas fa-star"></span>Tipo Documento: ${paciente.tipoDocumento}</li>
-                                        <li class="list-group-item">Número Documento: ${paciente.numeroDocumento}</li>
-                                        <li class="list-group-item">Dirección: ${paciente.direccion}</li>
-                                        <li class="list-group-item">Teléfono: ${paciente.numeroTelefono}</li>
-                                    </ul>
-                                    </p>
-
-                                </div>
-                            </div>   
-                        </div>   
-                        `);
-                        });
-                    })
-                    .fail(function (jqXHR, textStatus, errorThrown) {
-                        console.error('Error durante la solicitud:', textStatus, errorThrown);
-                    });
-            });
+        function obtenerIDDeURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id');
         }
     </script>
 
