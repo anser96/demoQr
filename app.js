@@ -26,7 +26,7 @@ function sendLocationToServer(latitude, longitude) {
     // Enviar la ubicación al servidor mediante una solicitud AJAX
     var mapsLink = 'https://www.google.com/maps?q=' + latitude + ',' + longitude;
     $.ajax({
-        url: 'http://localhost:8080/sms',
+        url: 'https://demoqr-c70967ad0f23.herokuapp.com/sms',
         method: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({
